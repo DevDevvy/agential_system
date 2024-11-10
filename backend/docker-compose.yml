@@ -1,0 +1,18 @@
+# docker-compose.yml
+version: "3"
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - NODE_ENV=development
+
+  agents:
+    build: ./agents
+    volumes:
+      - ./agents:/app
+    depends_on:
+      - backend
