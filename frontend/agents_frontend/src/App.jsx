@@ -72,12 +72,7 @@ const App = () => {
     }
   };
 
-  return (
-    <div>
-      <h1>Agential Application Development Assistant</h1>
-      {renderStageComponent()}
-    </div>
-  );
+  return <div className="app">{renderStageComponent()}</div>;
 };
 
 export default App;
